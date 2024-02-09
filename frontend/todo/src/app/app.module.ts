@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routes';
 import { ErrorComponent } from './error/error.component';
+import { ListTodosComponent } from './list-todos/list-todos.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,11 +16,13 @@ import { ErrorComponent } from './error/error.component';
     AppComponent,
     WelcomeComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListTodosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   // FormsModule
   ],
   providers:[],
   bootstrap:[AppComponent]
