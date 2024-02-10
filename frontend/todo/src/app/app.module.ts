@@ -11,6 +11,7 @@ import { ListTodosComponent } from './list-todos/list-todos.component';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     ErrorComponent,
     ListTodosComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

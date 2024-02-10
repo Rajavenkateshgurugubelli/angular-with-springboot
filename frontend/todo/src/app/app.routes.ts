@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LogoutComponent } from './logout/logout.component';
 
 export const routes: Routes = [
 
@@ -11,7 +12,7 @@ export const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'welcome/:name',component:WelcomeComponent},
     {path:'todo',component:ListTodosComponent},
-   // {path:'logout',component:LogoutComponent},
+    {path:'logout',component:LogoutComponent},
     {path:'**',component:ErrorComponent}
     
 
