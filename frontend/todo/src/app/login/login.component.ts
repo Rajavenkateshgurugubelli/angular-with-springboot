@@ -2,6 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
   invalidLogin=false
 
 
-  constructor(private router:Router){
+  constructor(private router:Router,
+    private hardcodedAuthenticationService: HardcodedAuthenticationService ){
   
   }
 
@@ -26,7 +28,8 @@ export class LoginComponent implements OnInit {
     
   }
   login(){
-    if(this.username==='user' && this.password ==='user'){
+    
+    if(this.hardcodedAuthenticationService.authenticate(this.username,this.password)){
       this.router.navigate(['welcome',this.username])
       this.invalidLogin=false
       console.log('user logged in')
