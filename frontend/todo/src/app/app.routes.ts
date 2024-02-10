@@ -5,14 +5,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LogoutComponent } from './logout/logout.component';
+import { RouteGaurdService } from './service/route-gaurd.service';
 
 export const routes: Routes = [
 
     {path:'',component:LoginComponent},
     {path:'login',component:LoginComponent},
-    {path:'welcome/:name',component:WelcomeComponent},
-    {path:'todo',component:ListTodosComponent},
-    {path:'logout',component:LogoutComponent},
+    {path:'welcome/:name',component:WelcomeComponent,canActivate:[RouteGaurdService]},
+    {path:'todo',component:ListTodosComponent,canActivate:[RouteGaurdService]},
+    {path:'logout',component:LogoutComponent,canActivate:[RouteGaurdService]},
     {path:'**',component:ErrorComponent}
     
 
