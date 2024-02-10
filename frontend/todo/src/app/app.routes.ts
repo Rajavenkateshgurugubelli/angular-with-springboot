@@ -11,6 +11,7 @@ export const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'welcome/:name',component:WelcomeComponent},
     {path:'todo',component:ListTodosComponent},
+   // {path:'logout',component:LogoutComponent},
     {path:'**',component:ErrorComponent}
     
 

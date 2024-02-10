@@ -1,23 +1,28 @@
-<table border="'2">
-    <caption>My Todo's</caption>
-    <thead>
-        <tr>
-            <th>id</th>
-            <th>description</th>
-            <th>done</th>
-            <th>targetdate</th>
-        </tr>
-    </thead>
-    <tbody >
-        <tr *ngFor="let todo of todos">
-            <td>{{todo.id}}</td>
-            <td>{{todo.description}}</td>
-            <td>
-                <input type="checkbox" name="done" [(ngModel)]="todo.done">
-            </td>
-            <td>
-                <input type="date" name="date" [(ngModel)]="todo.targetDate">
-            </td>
-        </tr>
-    </tbody>
-</table>
+<h1>My Todo's</h1>
+<div class="container">
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Done</th>
+                <th>Target date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.id}}</td>
+                <td>{{todo.description}}</td>
+                <td>
+                    {{todo.done }}
+                    <!-- <input type="checkbox" name="done" [(ngModel)]="todo.done"> -->
+                </td>
+                <td>
+                    {{todo.targetDate | date}}
+                    <!-- <input type="date" name="date" [(ngModel)]="todo.targetDate"> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

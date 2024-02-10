@@ -7,7 +7,10 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routes';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -17,11 +20,14 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     LoginComponent,
     ErrorComponent,
-    ListTodosComponent
+    ListTodosComponent,
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule
    // FormsModule
   ],
   providers:[],

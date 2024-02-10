@@ -1,11 +1,11 @@
-import { NgFor } from '@angular/common';
+import { DatePipe, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-todos',
   standalone: true,
-  imports: [NgFor,FormsModule],
+  imports: [NgFor,FormsModule,DatePipe],
   templateUrl: './list-todos.component.html',
   styleUrl: './list-todos.component.css'
 })
