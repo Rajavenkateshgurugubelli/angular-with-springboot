@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routes';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
@@ -28,6 +29,7 @@ import { LogoutComponent } from './logout/logout.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     CommonModule,
      
